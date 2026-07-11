@@ -25,7 +25,7 @@ function alignText(zh, py) {
             html += `<span class="char-box"><span class="py-text" style="visibility: hidden;">&nbsp;</span><span class="punctuation" style="font-weight: 600; color: #1e293b;">${c}</span></span>`;
         }
         // 标点符号（含中文括号、方括号、中文引号）：不配拼音，透明占位
-        else if (/[\.\/\\\,，。？！：“”‘’《》、\-\:；—\s（）\[\]''~!@#$%^&*|:""<>?/.,';]/.test(c)) {
+        else if (/[\.\/\\\,，。？！：“”‘’《》、\-\:；—\s（）\[\]“”]/.test(c)) {
             html += `<span class="char-box"><span class="py-text" style="visibility: hidden;">&nbsp;</span><span class="punctuation">${c}</span></span>`;
         } 
         // 中文汉字：正常配拼音
